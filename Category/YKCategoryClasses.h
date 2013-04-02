@@ -30,14 +30,13 @@
 @end
 
 @class SectionHeaderView;
-@class YKVanclCategory;
 
-@interface YKDataMode(openAdd)
-- (void)setOpen:(BOOL)abool;
-- (BOOL)isOpen;
-- (void)setHeaderView:(SectionHeaderView*)headerView;
-- (SectionHeaderView*)headerView;
-@end
+//@interface YKDataMode(openAdd)
+//- (void)setOpen:(BOOL)abool;
+//- (BOOL)isOpen;
+//- (void)setHeaderView:(SectionHeaderView*)headerView;
+//- (SectionHeaderView*)headerView;
+//@end
 
 
 /*
@@ -59,7 +58,7 @@
  @superclass UIButton
  */
 @interface YKButtonForGategory : UIButton
-@property(nonatomic, retain) YKVanclCategory* aCategory;
+@property(nonatomic, retain) YKDataMode* aCategory;
 @end
 
 /*!

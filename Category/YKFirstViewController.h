@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YKCategoryClasses.h"
+#import "YKDataMode.h"
+#import "YKCateTableView.h"
 @interface YKFirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-@property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) IBOutlet UITableView<SectionHeaderViewDelegate> *categoryTableView;
 
 @end

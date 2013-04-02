@@ -88,6 +88,7 @@
         UIImageView *button = [[UIImageView alloc] init];
         button.frame = CGRectMake(10.0, 8.0, 54.0, 54.0);
 //        [YKImage queueLoadImageFromUrl:imgaeUrl imageView:button defaultImage:[UIImage imageNamed:@"vancl.png"]];
+        button.image = [UIImage imageNamed:@"moo.png"];
         [self addSubview:button];
         _disclosureButton = button;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUpLineChange:) name:@"_openSectionIndex" object:nil];
@@ -137,21 +138,21 @@
 
 @end
 
-@implementation YKDataMode (openAdd)
-- (void)setOpen:(BOOL)abool{
-    [self setAttribute:[NSNumber numberWithBool:abool] forKey:@"isOpen"];
-}
-- (BOOL)isOpen{
-    
-    return [[self attributeForKey:@"isOpen"] boolValue];
-}
-- (void)setHeaderView:(SectionHeaderView*)headerView{
-    [self setAttribute:headerView forKey:@"headerView"];
-}
-- (SectionHeaderView*)headerView{
-    return [self attributeForKey:@"headerView"] ;
-}
-@end
+//@implementation YKDataMode (openAdd)
+//- (void)setOpen:(BOOL)abool{
+//    [self setAttribute:[NSNumber numberWithBool:abool] forKey:@"isOpen"];
+//}
+//- (BOOL)isOpen{
+//    
+//    return [[self attributeForKey:@"isOpen"] boolValue];
+//}
+//- (void)setHeaderView:(SectionHeaderView*)headerView{
+//    [self setAttribute:headerView forKey:@"headerView"];
+//}
+//- (SectionHeaderView*)headerView{
+//    return [self attributeForKey:@"headerView"] ;
+//}
+//@end
 
 
 @implementation YKButtonForGategory

@@ -12,17 +12,9 @@
 - (id)init{
     self = [super init];
     if (self) {
-        self.dataDic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"]];
     }
     return self;
 }
-- (NSString *)description{
-    return self.dataDic.description;
-}
-- (void)setAttribute:(id)obj forKey:(NSString*)key{}
 
 
-- (id)attributeForKey:(NSString *)key{
-    return nil;
-}
 @end
