@@ -2,7 +2,7 @@
 //  YKFirstViewController.m
 //  Category
 //
-//  Created by  YK on 13-4-2.
+//  Created by  yanguo.sun on 13-4-2.
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
@@ -63,24 +63,26 @@
     }
     YKDataMode* category=(YKDataMode*)[self.sectionInfoArray objectAtIndex:indexPath.section];
     int row = indexPath.row;
-    YKDataMode * obj =nil;
-    obj =[category.subArray objectAtIndex:row*2];
-    [cell.leftLabel setText:[obj title_cate]];
-    cell.leftGategory.aCategory = obj;
+    NSString * obj =[category.subArray objectAtIndex:row*2];
+    [cell.leftLabel setText:obj];
+//    cell.leftGategory.aCategory = obj;
     [cell.leftGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
     if (row*2+1==category.subArray.count) {
         cell.rightGategory.hidden = YES;
     }else{
         cell.rightGategory.hidden = NO;
-        obj =(YKDataMode*)[category.subArray objectAtIndex:row*2+1];
-        [cell.rightLabel setText:[obj title_cate]];
-        cell.rightGategory.aCategory = obj;
+        obj =[category.subArray objectAtIndex:row*2+1];
+        [cell.rightLabel setText:obj];
+//        cell.rightGategory.aCategory = obj;
         [cell.rightGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
     }
     return cell;
 
     cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
     return cell;
+}
+- (void)goProList:(YKButtonForGategory*)button{
+    CLog(@"%s",__func__);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -94,7 +96,7 @@
     YKDataMode *dataMode = [self.sectionInfoArray objectAtIndex:section];
     view = dataMode.headerView_cate;
     if (!view) {
-        dataMode.headerView_cate = [[SectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:dataMode.title_cate subTitle:dataMode.subTitle_cate imageUrl:nil section:section delegate:self.categoryTableView];
+        dataMode.headerView_cate = [[YKSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:dataMode.title_cate subTitle:dataMode.subTitle_cate imageUrl:nil section:section delegate:self.categoryTableView];
         dataMode.headerView_cate.delegate = _categoryTableView;
         view = dataMode.headerView_cate;
     }

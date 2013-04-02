@@ -2,7 +2,7 @@
 //  YKCateTableView.m
 //  Category
 //
-//  Created by  YK on 13-4-2.
+//  Created by  yanguo.sun on 13-4-2.
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
@@ -33,7 +33,7 @@
 - (int)get_OpenSectionIndex{
     return _openSectionIndex;
 }
--(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionOpened:(NSInteger)sectionOpened {
+-(void)sectionHeaderView:(YKSectionHeaderView*)sectionHeaderView sectionOpened:(NSInteger)sectionOpened {
 	
     
 	YKDataMode *sectionInfo = [self.sectionInfoArray objectAtIndex:sectionOpened];
@@ -91,7 +91,7 @@
 }
 
 
--(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
+-(void)sectionHeaderView:(YKSectionHeaderView*)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
     
     /*
      Create an array of the index paths of the rows in the section that was closed, then delete those rows from the table view.

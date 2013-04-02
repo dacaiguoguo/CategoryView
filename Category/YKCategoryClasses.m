@@ -2,7 +2,7 @@
 //  YKCategoryClasses.m
 //  Category
 //
-//  Created by  YK on 13-4-2.
+//  Created by  yanguo.sun on 13-4-2.
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 @end
 
 
-@implementation SectionHeaderView
+@implementation YKSectionHeaderView
 
 
 @synthesize titleLabel=_titleLabel, subTitleLabel=_subTitleLabel,disclosureButton=_disclosureButton, delegate=_delegate, section=_section,lineLabel = _lineLabel,lineImage = _lineImage;
@@ -57,7 +57,7 @@
         _lineImage = line;
         
         UILabel *lineLabelt = [[UILabel alloc] initWithFrame:lineRect];
-        lineLabelt.backgroundColor = [UIColor greenColor];
+        lineLabelt.backgroundColor = [UIColor lightGrayColor];
         lineLabelt.hidden = YES;
         [self addSubview:lineLabelt];
         _lineLabel = lineLabelt;
@@ -77,7 +77,7 @@
         UILabel *subLabel = [[UILabel alloc] initWithFrame:titleLabelFrame];
         subLabel.text = subTitle;
         subLabel.font = [UIFont systemFontOfSize:12];
-        subLabel.textColor = [UIColor greenColor];
+        subLabel.textColor = [UIColor blackColor];
         subLabel.backgroundColor = [UIColor clearColor];
         [self addSubview:subLabel];
         

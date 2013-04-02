@@ -2,7 +2,7 @@
 //  YKCategoryClasses.h
 //  Category
 //
-//  Created by  YK on 13-4-2.
+//  Created by  yanguo.sun on 13-4-2.
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 @protocol SectionHeaderViewDelegate;
 
 
-@interface SectionHeaderView : UIView
+@interface YKSectionHeaderView : UIView
 
 @property (nonatomic, assign) UILabel *titleLabel;
 @property (nonatomic, assign) UILabel *subTitleLabel;
@@ -29,7 +29,7 @@
 - (void)setUpLineChange:(BOOL)change;
 @end
 
-@class SectionHeaderView;
+@class YKSectionHeaderView;
 
 //@interface YKDataMode(openAdd)
 //- (void)setOpen:(BOOL)abool;
@@ -45,8 +45,8 @@
 @protocol SectionHeaderViewDelegate <NSObject>
 
 @optional
--(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionOpened:(NSInteger)section;
--(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionClosed:(NSInteger)section;
+-(void)sectionHeaderView:(YKSectionHeaderView*)sectionHeaderView sectionOpened:(NSInteger)section;
+-(void)sectionHeaderView:(YKSectionHeaderView*)sectionHeaderView sectionClosed:(NSInteger)section;
 - (int)get_OpenSectionIndex;
 
 @end
