@@ -9,10 +9,6 @@
 #import "YKCategoryClasses.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation YKCategoryClasses
-
-@end
-
 
 @implementation YKSectionHeaderView
 
@@ -138,22 +134,6 @@
 
 
 @end
-
-//@implementation YKDataMode (openAdd)
-//- (void)setOpen:(BOOL)abool{
-//    [self setAttribute:[NSNumber numberWithBool:abool] forKey:@"isOpen"];
-//}
-//- (BOOL)isOpen{
-//    
-//    return [[self attributeForKey:@"isOpen"] boolValue];
-//}
-//- (void)setHeaderView:(SectionHeaderView*)headerView{
-//    [self setAttribute:headerView forKey:@"headerView"];
-//}
-//- (SectionHeaderView*)headerView{
-//    return [self attributeForKey:@"headerView"] ;
-//}
-//@end
 
 
 @implementation YKButtonForGategory

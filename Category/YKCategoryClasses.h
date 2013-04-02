@@ -7,9 +7,7 @@
 //
 
 #import "YKDataMode.h"
-@interface YKCategoryClasses : NSObject
 
-@end
 @protocol YKSectionHeaderViewDelegate;
 
 
@@ -30,12 +28,7 @@
 @end
 
 
-//@interface YKDataMode(openAdd)
-//- (void)setOpen:(BOOL)abool;
-//- (BOOL)isOpen;
-//- (void)setHeaderView:(SectionHeaderView*)headerView;
-//- (SectionHeaderView*)headerView;
-//@end
+
 
 
 /*
