@@ -11,6 +11,6 @@
 #import "YKDataMode.h"
 #import "YKCateTableView.h"
 @interface YKFirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-@property (retain, nonatomic) IBOutlet UITableView<SectionHeaderViewDelegate> *categoryTableView;
+@property (retain, nonatomic) IBOutlet UITableView<YKSectionHeaderViewDelegate> *categoryTableView;
 
 @end

@@ -26,9 +26,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[[YKFirstViewController alloc] initWithNibName:@"YKFirstViewController" bundle:nil] autorelease];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    
     UIViewController *viewController2 = [[[YKSecondViewController alloc] initWithNibName:@"YKSecondViewController" bundle:nil] autorelease];
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[nav, viewController2];
+    [nav release];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

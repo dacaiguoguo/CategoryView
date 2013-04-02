@@ -33,7 +33,7 @@
             [self.sectionInfoArray addObject:data];
             [data release];
         }
-        self.categoryTableView = [[[YKCateTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-49) andData:self.sectionInfoArray] autorelease];
+        self.categoryTableView = [[[YKCateTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-49-46) andData:self.sectionInfoArray] autorelease];
         _categoryTableView.dataSource = self;
         _categoryTableView.delegate = self;
         [self.view addSubview:_categoryTableView];

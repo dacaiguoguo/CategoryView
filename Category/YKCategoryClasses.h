@@ -10,7 +10,7 @@
 @interface YKCategoryClasses : NSObject
 
 @end
-@protocol SectionHeaderViewDelegate;
+@protocol YKSectionHeaderViewDelegate;
 
 
 @interface YKSectionHeaderView : UIView
@@ -21,15 +21,14 @@
 @property (nonatomic, assign) UIImageView *lineImage;
 @property (nonatomic, assign)  UILabel *lineLabel;
 @property (nonatomic, assign) NSInteger section;
-@property (nonatomic, assign) id <SectionHeaderViewDelegate> delegate;
+@property (nonatomic, assign) id <YKSectionHeaderViewDelegate> delegate;
 @property (nonatomic, assign) BOOL iselected;
--(id)initWithFrame:(CGRect)frame title:(NSString*)title subTitle:(NSString*)subTitle imageUrl:(NSString *)imgaeUrl section:(NSInteger)sectionNumber delegate:(id <SectionHeaderViewDelegate>)delegate;
+-(id)initWithFrame:(CGRect)frame title:(NSString*)title subTitle:(NSString*)subTitle imageUrl:(NSString *)imgaeUrl section:(NSInteger)sectionNumber delegate:(id <YKSectionHeaderViewDelegate>)delegate;
 
 -(void)toggleOpenWithUserAction:(BOOL)userAction;
 - (void)setUpLineChange:(BOOL)change;
 @end
 
-@class YKSectionHeaderView;
 
 //@interface YKDataMode(openAdd)
 //- (void)setOpen:(BOOL)abool;
@@ -42,7 +41,7 @@
 /*
  Protocol to be adopted by the section header's delegate; the section header tells its delegate when the section should be opened and closed.
  */
-@protocol SectionHeaderViewDelegate <NSObject>
+@protocol YKSectionHeaderViewDelegate <NSObject>
 
 @optional
 -(void)sectionHeaderView:(YKSectionHeaderView*)sectionHeaderView sectionOpened:(NSInteger)section;

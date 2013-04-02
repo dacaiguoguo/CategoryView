@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YKCategoryClasses.h"
-@interface YKCateTableView : UITableView<SectionHeaderViewDelegate>
+@interface YKCateTableView : UITableView<YKSectionHeaderViewDelegate>
 /*!@var openSectionIndex 当前打开的Section*/
 @property (nonatomic, assign) NSInteger openSectionIndex;
 /*!@var sectionInfoArray 分类信息数组*/

@@ -29,7 +29,7 @@
     
 }
 
--(id)initWithFrame:(CGRect)frame title:(NSString*)title subTitle:(NSString*)subTitle imageUrl:(NSString *)imgaeUrl section:(NSInteger)sectionNumber delegate:(id <SectionHeaderViewDelegate>)delegate {
+-(id)initWithFrame:(CGRect)frame title:(NSString*)title subTitle:(NSString*)subTitle imageUrl:(NSString *)imgaeUrl section:(NSInteger)sectionNumber delegate:(id <YKSectionHeaderViewDelegate>)delegate {
     
     self = [super initWithFrame:frame];
     
