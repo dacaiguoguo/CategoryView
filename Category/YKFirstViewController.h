@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YKFirstViewController : UIViewController
+@interface YKFirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 
 @end

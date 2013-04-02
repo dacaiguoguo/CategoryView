@@ -29,6 +29,10 @@
 		59B828CB170A8BA70069FBB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B82898170A8BA70069FBB3 /* Foundation.framework */; };
 		59B828D3170A8BA70069FBB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59B828D1170A8BA70069FBB3 /* InfoPlist.strings */; };
 		59B828D6170A8BA70069FBB3 /* CategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828D5170A8BA70069FBB3 /* CategoryTests.m */; };
+		59B828E3170A8C580069FBB3 /* YKCategoryClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */; };
+		59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828E5170A8CC40069FBB3 /* YKDataMode.m */; };
+		59B828E8170AA0A10069FBB3 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59B828E7170AA0A10069FBB3 /* data.plist */; };
+		59B828ED170AA4F80069FBB3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B828EC170AA4F80069FBB3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,12 @@
 		59B828D2170A8BA70069FBB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59B828D4170A8BA70069FBB3 /* CategoryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryTests.h; sourceTree = "<group>"; };
 		59B828D5170A8BA70069FBB3 /* CategoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryTests.m; sourceTree = "<group>"; };
+		59B828E1170A8C580069FBB3 /* YKCategoryClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCategoryClasses.h; sourceTree = "<group>"; };
+		59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCategoryClasses.m; sourceTree = "<group>"; };
+		59B828E4170A8CC40069FBB3 /* YKDataMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDataMode.h; sourceTree = "<group>"; };
+		59B828E5170A8CC40069FBB3 /* YKDataMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDataMode.m; sourceTree = "<group>"; };
+		59B828E7170AA0A10069FBB3 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		59B828EC170AA4F80069FBB3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B828ED170AA4F80069FBB3 /* QuartzCore.framework in Frameworks */,
 				59B82897170A8BA70069FBB3 /* UIKit.framework in Frameworks */,
 				59B82899170A8BA70069FBB3 /* Foundation.framework in Frameworks */,
 				59B8289B170A8BA70069FBB3 /* CoreGraphics.framework in Frameworks */,
@@ -119,6 +130,7 @@
 		59B82895170A8BA70069FBB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59B828EC170AA4F80069FBB3 /* QuartzCore.framework */,
 				59B82896170A8BA70069FBB3 /* UIKit.framework */,
 				59B82898170A8BA70069FBB3 /* Foundation.framework */,
 				59B8289A170A8BA70069FBB3 /* CoreGraphics.framework */,
@@ -130,18 +142,19 @@
 		59B8289C170A8BA70069FBB3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				59B828E9170AA26A0069FBB3 /* cate */,
 				59B828A5170A8BA70069FBB3 /* YKAppDelegate.h */,
 				59B828A6170A8BA70069FBB3 /* YKAppDelegate.m */,
 				59B828AE170A8BA70069FBB3 /* YKFirstViewController.h */,
 				59B828AF170A8BA70069FBB3 /* YKFirstViewController.m */,
-				59B828B1170A8BA70069FBB3 /* first.png */,
-				59B828B3170A8BA70069FBB3 /* first@2x.png */,
+				59B828BC170A8BA70069FBB3 /* YKFirstViewController.xib */,
 				59B828B5170A8BA70069FBB3 /* YKSecondViewController.h */,
 				59B828B6170A8BA70069FBB3 /* YKSecondViewController.m */,
+				59B828BF170A8BA70069FBB3 /* YKSecondViewController.xib */,
+				59B828B1170A8BA70069FBB3 /* first.png */,
+				59B828B3170A8BA70069FBB3 /* first@2x.png */,
 				59B828B8170A8BA70069FBB3 /* second.png */,
 				59B828BA170A8BA70069FBB3 /* second@2x.png */,
-				59B828BC170A8BA70069FBB3 /* YKFirstViewController.xib */,
-				59B828BF170A8BA70069FBB3 /* YKSecondViewController.xib */,
 				59B8289D170A8BA70069FBB3 /* Supporting Files */,
 			);
 			path = Category;
@@ -178,6 +191,18 @@
 				59B828D1170A8BA70069FBB3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59B828E9170AA26A0069FBB3 /* cate */ = {
+			isa = PBXGroup;
+			children = (
+				59B828E1170A8C580069FBB3 /* YKCategoryClasses.h */,
+				59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */,
+				59B828E4170A8CC40069FBB3 /* YKDataMode.h */,
+				59B828E5170A8CC40069FBB3 /* YKDataMode.m */,
+				59B828E7170AA0A10069FBB3 /* data.plist */,
+			);
+			name = cate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +287,7 @@
 				59B828BB170A8BA70069FBB3 /* second@2x.png in Resources */,
 				59B828BE170A8BA70069FBB3 /* YKFirstViewController.xib in Resources */,
 				59B828C1170A8BA70069FBB3 /* YKSecondViewController.xib in Resources */,
+				59B828E8170AA0A10069FBB3 /* data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +326,8 @@
 				59B828A7170A8BA70069FBB3 /* YKAppDelegate.m in Sources */,
 				59B828B0170A8BA70069FBB3 /* YKFirstViewController.m in Sources */,
 				59B828B7170A8BA70069FBB3 /* YKSecondViewController.m in Sources */,
+				59B828E3170A8C580069FBB3 /* YKCategoryClasses.m in Sources */,
+				59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
