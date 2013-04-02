@@ -6,11 +6,13 @@
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class SectionHeaderView;
 
 @interface YKDataMode : NSObject
 @property (assign) BOOL open_cate;
-@property (nonatomic, retain) UIView *headerView_cate;
+@property (nonatomic, copy) NSString *title_cate;
+@property (nonatomic, copy) NSString *subTitle_cate;
+@property (nonatomic, retain) SectionHeaderView *headerView_cate;
 @property (nonatomic, retain) NSArray *subArray;
 
 @end

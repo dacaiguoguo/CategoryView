@@ -89,6 +89,7 @@
         button.frame = CGRectMake(10.0, 8.0, 54.0, 54.0);
 //        [YKImage queueLoadImageFromUrl:imgaeUrl imageView:button defaultImage:[UIImage imageNamed:@"vancl.png"]];
         button.image = [UIImage imageNamed:@"moo.png"];
+        button.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:button];
         _disclosureButton = button;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUpLineChange:) name:@"_openSectionIndex" object:nil];

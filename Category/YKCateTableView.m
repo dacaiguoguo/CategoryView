@@ -23,6 +23,7 @@
     if (self) {
         self.sectionInfoArray = _array;
         _openSectionIndex = NSNotFound;
+        self.separatorStyle = UITableViewCellSeparatorStyleNone;
         // Initialization code
     }
     return self;

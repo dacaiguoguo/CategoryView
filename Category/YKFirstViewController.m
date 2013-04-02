@@ -27,10 +27,16 @@
         for (int i=0; i<10; i++) {
             YKDataMode *data = [[YKDataMode alloc] init];
             //        CFShow(data);
+            data.title_cate = @"男装";
+            data.subTitle_cate = @"vt";
             data.subArray = @[@"1",@"2",@"3",@"4"];
             [self.sectionInfoArray addObject:data];
             [data release];
         }
+        self.categoryTableView = [[[YKCateTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-49) andData:self.sectionInfoArray] autorelease];
+        _categoryTableView.dataSource = self;
+        _categoryTableView.delegate = self;
+        [self.view addSubview:_categoryTableView];
     }
     return self;
 }
@@ -38,10 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.categoryTableView = [[[YKCateTableView alloc] initWithFrame:self.view.bounds andData:self.sectionInfoArray] autorelease];
-    _categoryTableView.dataSource = self;
-    _categoryTableView.delegate = self;
-    [self.view addSubview:_categoryTableView];
+
 
 
 	// Do any additional setup after loading the view, typically from a nib.
@@ -66,14 +69,15 @@
    return self.sectionInfoArray.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
+    return 70;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = nil;
     YKDataMode *dataMode = [self.sectionInfoArray objectAtIndex:section];
     view = dataMode.headerView_cate;
     if (!view) {
-        dataMode.headerView_cate = [[SectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:@"titi" subTitle:@"newnenw" imageUrl:nil section:section delegate:self.categoryTableView];
+        dataMode.headerView_cate = [[SectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:dataMode.title_cate subTitle:dataMode.subTitle_cate imageUrl:nil section:section delegate:self.categoryTableView];
+        dataMode.headerView_cate.delegate = _categoryTableView;
         view = dataMode.headerView_cate;
     }
     return view;
