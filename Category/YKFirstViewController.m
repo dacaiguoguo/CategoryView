@@ -7,7 +7,7 @@
 //
 
 #import "YKFirstViewController.h"
-
+#import "YKXIBHelper.h"
 
 @interface YKFirstViewController ()
 /*!@var sectionInfoArray 分类信息数组*/
@@ -56,11 +56,29 @@
     return [sectionInfo open_cate] ? (NSInteger)ceilf(numStoriesInSection/2) : 0;
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-   static NSString *idfi = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:idfi];
+   static NSString *idfi = @"YKTableViewCellForGategory";
+    YKTableViewCellForGategory *cell = [tableView dequeueReusableCellWithIdentifier:idfi];
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:idfi] autorelease];
+        cell=[YKXIBHelper loadObjectFromXIBName:@"YKTableViewCellForGategory" type:[YKTableViewCellForGategory class]];
     }
+    YKDataMode* category=(YKDataMode*)[self.sectionInfoArray objectAtIndex:indexPath.section];
+    int row = indexPath.row;
+    YKDataMode * obj =nil;
+    obj =[category.subArray objectAtIndex:row*2];
+    [cell.leftLabel setText:[obj title_cate]];
+    cell.leftGategory.aCategory = obj;
+    [cell.leftGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
+    if (row*2+1==category.subArray.count) {
+        cell.rightGategory.hidden = YES;
+    }else{
+        cell.rightGategory.hidden = NO;
+        obj =(YKDataMode*)[category.subArray objectAtIndex:row*2+1];
+        [cell.rightLabel setText:[obj title_cate]];
+        cell.rightGategory.aCategory = obj;
+        [cell.rightGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return cell;
+
     cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
     return cell;
 }
