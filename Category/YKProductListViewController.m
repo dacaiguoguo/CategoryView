@@ -6,19 +6,19 @@
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
-#import "YKSecondViewController.h"
+#import "YKProductListViewController.h"
 
-@interface YKSecondViewController ()
+@interface YKProductListViewController ()
 
 @end
 
-@implementation YKSecondViewController
+@implementation YKProductListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
+        self.title =  @"商品列表";
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;

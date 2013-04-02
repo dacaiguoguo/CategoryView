@@ -6,19 +6,18 @@
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
-#import "YKFirstViewController.h"
+#import "YKCategoryViewController.h"
+#import "YKProductListViewController.h"
 #import "YKXIBHelper.h"
 
-@interface YKFirstViewController ()
-/*!@var sectionInfoArray 分类信息数组*/
-@property (nonatomic, strong) NSMutableArray* sectionInfoArray;
+@interface YKCategoryViewController ()
+
 
 @end
 
-@implementation YKFirstViewController
+@implementation YKCategoryViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"First", @"First");
@@ -40,6 +39,15 @@
     }
     return self;
 }
+
+/*当分类没有子分类时调用：去商品列表的方法 */
+- (void)didSelectSection:(NSNumber *)_section{
+    CLog(@"%s",__func__);
+    YKProductListViewController *p = [[YKProductListViewController alloc] initWithNibName:@"YKProductDetailViewController" bundle:nil];
+    [self.navigationController pushViewController:p animated:YES];
+    [p release];
+}
+
 							
 - (void)viewDidLoad
 {
@@ -78,11 +86,22 @@
     }
     return cell;
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
-    return cell;
 }
 - (void)goProList:(YKButtonForGategory*)button{
     CLog(@"%s",__func__);
+    YKCategoryViewController *to = [[YKCategoryViewController alloc] initWithNibName:@"YKCategoryViewController" bundle:nil];
+    [to.sectionInfoArray removeAllObjects];
+    for (int i=0; i<10; i++) {
+        YKDataMode *data = [[YKDataMode alloc] init];
+        //        CFShow(data);
+        data.title_cate = [NSString stringWithFormat:@"%@:%d",@"男装",i];
+        data.subTitle_cate = [NSString stringWithFormat:@"%@:%d",@"vt",i];;
+        data.subArray =nil;
+        [to.sectionInfoArray addObject:data];
+        [data release];
+    }
+    [self.navigationController pushViewController:to animated:YES];
+    [to release];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

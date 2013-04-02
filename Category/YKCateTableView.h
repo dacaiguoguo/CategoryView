@@ -12,6 +12,6 @@
 /*!@var openSectionIndex 当前打开的Section*/
 @property (nonatomic, assign) NSInteger openSectionIndex;
 /*!@var sectionInfoArray 分类信息数组*/
-@property (nonatomic, strong) NSArray* sectionInfoArray;
+@property (nonatomic, assign) NSArray* sectionInfoArray;
 - (id)initWithFrame:(CGRect)frame andData:(NSArray *)_array;
 @end

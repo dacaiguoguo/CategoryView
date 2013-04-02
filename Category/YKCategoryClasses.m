@@ -41,7 +41,7 @@
         
         _delegate = delegate;
         self.userInteractionEnabled = YES;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor grayColor];
         self.opaque = YES;
         
         // Create and configure the title label.

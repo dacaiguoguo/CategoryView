@@ -8,9 +8,9 @@
 
 #import "YKAppDelegate.h"
 
-#import "YKFirstViewController.h"
+#import "YKCategoryViewController.h"
 
-#import "YKSecondViewController.h"
+#import "YKProductListViewController.h"
 
 @implementation YKAppDelegate
 
@@ -25,10 +25,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[YKFirstViewController alloc] initWithNibName:@"YKFirstViewController" bundle:nil] autorelease];
+    UIViewController *viewController1 = [[[YKCategoryViewController alloc] initWithNibName:@"YKFirstViewController" bundle:nil] autorelease];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController1];
     
-    UIViewController *viewController2 = [[[YKSecondViewController alloc] initWithNibName:@"YKSecondViewController" bundle:nil] autorelease];
+    UIViewController *viewController2 = [[[YKProductListViewController alloc] initWithNibName:@"YKSecondViewController" bundle:nil] autorelease];
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.tabBarController.viewControllers = @[nav, viewController2];
     [nav release];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YKSecondViewController : UIViewController
+@interface YKProductListViewController : UIViewController
 
 @end
