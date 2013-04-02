@@ -89,6 +89,11 @@
 }
 - (void)goProList:(YKButtonForGategory*)button{
     CLog(@"%s",__func__);
+    
+    if (button.aCategory.subArray==nil||button.aCategory.subArray.count<1) {
+        [self didSelectSection:nil];
+        return;
+    }
     YKCategoryViewController *to = [[YKCategoryViewController alloc] initWithNibName:@"YKCategoryViewController" bundle:nil];
     [to.sectionInfoArray removeAllObjects];
     for (int i=0; i<10; i++) {

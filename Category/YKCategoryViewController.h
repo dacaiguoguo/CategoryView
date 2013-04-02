@@ -12,7 +12,6 @@
 #import "YKCateTableView.h"
 @interface YKCategoryViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (retain, nonatomic) UITableView<YKSectionHeaderViewDelegate> *categoryTableView;
-@property (assign) BOOL hasSubCategory;
 /*!@var sectionInfoArray 分类信息数组*/
 @property (nonatomic, strong) NSMutableArray* sectionInfoArray;
 
