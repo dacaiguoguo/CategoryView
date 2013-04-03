@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		590F3BC5170BFF6100CD804C /* YKDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F3BC4170BFF6100CD804C /* YKDataBase.m */; };
 		590F3C15170C18FB00CD804C /* YKHeaderDetailListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F3C14170C18FB00CD804C /* YKHeaderDetailListView.m */; };
 		590F3C19170C196600CD804C /* YKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F3C17170C196600CD804C /* YKViewController.m */; };
 		590F3C1A170C196600CD804C /* YKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590F3C18170C196600CD804C /* YKViewController.xib */; };
-		5956D410170ABAC200F724CA /* moo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5956D40F170ABAC200F724CA /* moo.png */; };
-		599DCA0D170ABF4600D0164E /* fenlei_bg_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 599DCA0C170ABF4600D0164E /* fenlei_bg_line.png */; };
-		599DCA0F170AC32B00D0164E /* YKTableViewCellForGategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */; };
+		5956D410170ABAC200F724CA /* moo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5956D40F170ABAC200F724CA /* moo@2x.png */; };
+		599DCA0D170ABF4600D0164E /* fenlei_bg_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 599DCA0C170ABF4600D0164E /* fenlei_bg_line@2x.png */; };
 		599DCA13170AC45200D0164E /* YKXIBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 599DCA11170AC44D00D0164E /* YKXIBHelper.m */; };
 		59B82897170A8BA70069FBB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B82896170A8BA70069FBB3 /* UIKit.framework */; };
 		59B82899170A8BA70069FBB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B82898170A8BA70069FBB3 /* Foundation.framework */; };
@@ -26,11 +24,8 @@
 		59B828AD170A8BA70069FBB3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828AC170A8BA70069FBB3 /* Default-568h@2x.png */; };
 		59B828B2170A8BA70069FBB3 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828B1170A8BA70069FBB3 /* first.png */; };
 		59B828B4170A8BA70069FBB3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828B3170A8BA70069FBB3 /* first@2x.png */; };
-		59B828B7170A8BA70069FBB3 /* YKProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828B6170A8BA70069FBB3 /* YKProductListViewController.m */; };
 		59B828B9170A8BA70069FBB3 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828B8170A8BA70069FBB3 /* second.png */; };
 		59B828BB170A8BA70069FBB3 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828BA170A8BA70069FBB3 /* second@2x.png */; };
-		59B828BE170A8BA70069FBB3 /* YKCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59B828BC170A8BA70069FBB3 /* YKCategoryViewController.xib */; };
-		59B828C1170A8BA70069FBB3 /* YKProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59B828BF170A8BA70069FBB3 /* YKProductListViewController.xib */; };
 		59B828C9170A8BA70069FBB3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B828C8170A8BA70069FBB3 /* SenTestingKit.framework */; };
 		59B828CA170A8BA70069FBB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B82896170A8BA70069FBB3 /* UIKit.framework */; };
 		59B828CB170A8BA70069FBB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B82898170A8BA70069FBB3 /* Foundation.framework */; };
@@ -39,7 +34,6 @@
 		59B828E3170A8C580069FBB3 /* YKCategoryClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */; };
 		59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828E5170A8CC40069FBB3 /* YKDataMode.m */; };
 		59B828ED170AA4F80069FBB3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B828EC170AA4F80069FBB3 /* QuartzCore.framework */; };
-		59ED5035170BA61A00E7CA93 /* YKCLCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,16 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		590F3BC3170BFF6100CD804C /* YKDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDataBase.h; sourceTree = "<group>"; };
-		590F3BC4170BFF6100CD804C /* YKDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDataBase.m; sourceTree = "<group>"; };
 		590F3C13170C18FB00CD804C /* YKHeaderDetailListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHeaderDetailListView.h; sourceTree = "<group>"; };
 		590F3C14170C18FB00CD804C /* YKHeaderDetailListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHeaderDetailListView.m; sourceTree = "<group>"; };
 		590F3C16170C196600CD804C /* YKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKViewController.h; sourceTree = "<group>"; };
 		590F3C17170C196600CD804C /* YKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKViewController.m; sourceTree = "<group>"; };
 		590F3C18170C196600CD804C /* YKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKViewController.xib; sourceTree = "<group>"; };
-		5956D40F170ABAC200F724CA /* moo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moo.png; sourceTree = "<group>"; };
-		599DCA0C170ABF4600D0164E /* fenlei_bg_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fenlei_bg_line.png; sourceTree = "<group>"; };
-		599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKTableViewCellForGategory.xib; sourceTree = "<group>"; };
+		5956D40F170ABAC200F724CA /* moo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moo@2x.png"; sourceTree = "<group>"; };
+		599DCA0C170ABF4600D0164E /* fenlei_bg_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fenlei_bg_line@2x.png"; sourceTree = "<group>"; };
 		599DCA10170AC44C00D0164E /* YKXIBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKXIBHelper.h; sourceTree = "<group>"; };
 		599DCA11170AC44D00D0164E /* YKXIBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKXIBHelper.m; sourceTree = "<group>"; };
 		59B82893170A8BA70069FBB3 /* Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Category.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,16 +69,10 @@
 		59B828A8170A8BA70069FBB3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		59B828AA170A8BA70069FBB3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59B828AC170A8BA70069FBB3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		59B828AE170A8BA70069FBB3 /* YKCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCategoryViewController.h; sourceTree = "<group>"; };
-		59B828AF170A8BA70069FBB3 /* YKCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKCategoryViewController.m; sourceTree = "<group>"; };
 		59B828B1170A8BA70069FBB3 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		59B828B3170A8BA70069FBB3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		59B828B5170A8BA70069FBB3 /* YKProductListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKProductListViewController.h; sourceTree = "<group>"; };
-		59B828B6170A8BA70069FBB3 /* YKProductListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKProductListViewController.m; sourceTree = "<group>"; };
 		59B828B8170A8BA70069FBB3 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		59B828BA170A8BA70069FBB3 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		59B828BD170A8BA70069FBB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YKCategoryViewController.xib; sourceTree = "<group>"; };
-		59B828C0170A8BA70069FBB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YKProductListViewController.xib; sourceTree = "<group>"; };
 		59B828C7170A8BA70069FBB3 /* CategoryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CategoryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B828C8170A8BA70069FBB3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		59B828D0170A8BA70069FBB3 /* CategoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CategoryTests-Info.plist"; sourceTree = "<group>"; };
@@ -99,11 +84,6 @@
 		59B828E4170A8CC40069FBB3 /* YKDataMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDataMode.h; sourceTree = "<group>"; };
 		59B828E5170A8CC40069FBB3 /* YKDataMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDataMode.m; sourceTree = "<group>"; };
 		59B828EC170AA4F80069FBB3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		59B828EE170AAC240069FBB3 /* YKCateTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCateTableView.h; sourceTree = "<group>"; };
-		59B828EF170AAC240069FBB3 /* YKCateTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCateTableView.m; sourceTree = "<group>"; };
-		59ED5031170BA61A00E7CA93 /* YKCLCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCLCategoryViewController.h; sourceTree = "<group>"; };
-		59ED5032170BA61A00E7CA93 /* YKCLCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCLCategoryViewController.m; sourceTree = "<group>"; };
-		59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCLCategoryViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,18 +151,10 @@
 				590F3C16170C196600CD804C /* YKViewController.h */,
 				590F3C17170C196600CD804C /* YKViewController.m */,
 				590F3C18170C196600CD804C /* YKViewController.xib */,
-				590F3BC3170BFF6100CD804C /* YKDataBase.h */,
-				590F3BC4170BFF6100CD804C /* YKDataBase.m */,
-				59ED5031170BA61A00E7CA93 /* YKCLCategoryViewController.h */,
-				59ED5032170BA61A00E7CA93 /* YKCLCategoryViewController.m */,
-				59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */,
-				59B828B5170A8BA70069FBB3 /* YKProductListViewController.h */,
-				59B828B6170A8BA70069FBB3 /* YKProductListViewController.m */,
-				59B828BF170A8BA70069FBB3 /* YKProductListViewController.xib */,
 				599DCA10170AC44C00D0164E /* YKXIBHelper.h */,
 				599DCA11170AC44D00D0164E /* YKXIBHelper.m */,
-				599DCA0C170ABF4600D0164E /* fenlei_bg_line.png */,
-				5956D40F170ABAC200F724CA /* moo.png */,
+				599DCA0C170ABF4600D0164E /* fenlei_bg_line@2x.png */,
+				5956D40F170ABAC200F724CA /* moo@2x.png */,
 				59B828B1170A8BA70069FBB3 /* first.png */,
 				59B828B3170A8BA70069FBB3 /* first@2x.png */,
 				59B828B8170A8BA70069FBB3 /* second.png */,
@@ -230,12 +202,6 @@
 			children = (
 				59B828E4170A8CC40069FBB3 /* YKDataMode.h */,
 				59B828E5170A8CC40069FBB3 /* YKDataMode.m */,
-				59B828EE170AAC240069FBB3 /* YKCateTableView.h */,
-				59B828EF170AAC240069FBB3 /* YKCateTableView.m */,
-				59B828AE170A8BA70069FBB3 /* YKCategoryViewController.h */,
-				59B828AF170A8BA70069FBB3 /* YKCategoryViewController.m */,
-				59B828BC170A8BA70069FBB3 /* YKCategoryViewController.xib */,
-				599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */,
 				59B828E1170A8C580069FBB3 /* YKCategoryClasses.h */,
 				59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */,
 				590F3C13170C18FB00CD804C /* YKHeaderDetailListView.h */,
@@ -324,12 +290,8 @@
 				59B828B4170A8BA70069FBB3 /* first@2x.png in Resources */,
 				59B828B9170A8BA70069FBB3 /* second.png in Resources */,
 				59B828BB170A8BA70069FBB3 /* second@2x.png in Resources */,
-				59B828BE170A8BA70069FBB3 /* YKCategoryViewController.xib in Resources */,
-				59B828C1170A8BA70069FBB3 /* YKProductListViewController.xib in Resources */,
-				5956D410170ABAC200F724CA /* moo.png in Resources */,
-				599DCA0D170ABF4600D0164E /* fenlei_bg_line.png in Resources */,
-				599DCA0F170AC32B00D0164E /* YKTableViewCellForGategory.xib in Resources */,
-				59ED5035170BA61A00E7CA93 /* YKCLCategoryViewController.xib in Resources */,
+				5956D410170ABAC200F724CA /* moo@2x.png in Resources */,
+				599DCA0D170ABF4600D0164E /* fenlei_bg_line@2x.png in Resources */,
 				590F3C1A170C196600CD804C /* YKViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,11 +329,9 @@
 			files = (
 				59B828A3170A8BA70069FBB3 /* main.m in Sources */,
 				59B828A7170A8BA70069FBB3 /* YKAppDelegate.m in Sources */,
-				59B828B7170A8BA70069FBB3 /* YKProductListViewController.m in Sources */,
 				59B828E3170A8C580069FBB3 /* YKCategoryClasses.m in Sources */,
 				59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */,
 				599DCA13170AC45200D0164E /* YKXIBHelper.m in Sources */,
-				590F3BC5170BFF6100CD804C /* YKDataBase.m in Sources */,
 				590F3C15170C18FB00CD804C /* YKHeaderDetailListView.m in Sources */,
 				590F3C19170C196600CD804C /* YKViewController.m in Sources */,
 			);
@@ -402,22 +362,6 @@
 				59B828A0170A8BA70069FBB3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		59B828BC170A8BA70069FBB3 /* YKCategoryViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59B828BD170A8BA70069FBB3 /* en */,
-			);
-			name = YKCategoryViewController.xib;
-			sourceTree = "<group>";
-		};
-		59B828BF170A8BA70069FBB3 /* YKProductListViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59B828C0170A8BA70069FBB3 /* en */,
-			);
-			name = YKProductListViewController.xib;
 			sourceTree = "<group>";
 		};
 		59B828D1170A8BA70069FBB3 /* InfoPlist.strings */ = {

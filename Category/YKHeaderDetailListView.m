@@ -15,11 +15,20 @@
 @property (nonatomic, assign) NSInteger openSectionIndex;
 /*!@var sectionInfoArray 分类信息数组*/
 @property (nonatomic, retain) NSMutableDictionary* sectionInfoDic;
+
+@property (assign) CGRect orgFrame;
 @end
 @implementation YKHeaderDetailListView
-
+- (void)dealloc{
+    [super dealloc];
+    _datasource = nil;
+    _delegate = nil;
+    [_sectionInfoDic release];
+    [_interTable release];
+}
 - (id)initWithFrame:(CGRect)frame
 {
+    _orgFrame = frame;
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -28,16 +37,20 @@
     }
     return self;
 }
+
+- (UITableView*)interTable{
+    if (!_interTable) {
+           _interTable = [[UITableView alloc] initWithFrame:_orgFrame style:UITableViewStylePlain] ;
+        _interTable.dataSource = self;
+        _interTable.delegate = self;
+        [self addSubview:_interTable];
+        [_interTable release];
+    }
+    return _interTable;
+}
 -(void) reloadData{
-    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    self.interTable = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-49-46) style:UITableViewStylePlain] autorelease];
-    _interTable.dataSource = self;
-    _interTable.delegate = self;
-    [self addSubview:_interTable];
     _openSectionIndex = NSNotFound;
-
-    
-
+    [self.interTable reloadData];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
@@ -83,7 +96,6 @@
   YKDataMoudleList *mod =   [self changeSubFromDatasourceItemsAtRow:section];
     if (!mod.headerView_cate) {
         mod.headerView_cate = [[[YKSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 70) title:[self.datasource titleAtTopRow:section] subTitle:[self.datasource subTitleAtTopRow:section] imageUrl:nil section:section delegate:self] autorelease];
-        
     }
     assert(mod.headerView_cate);
     return mod.headerView_cate;
