@@ -140,7 +140,7 @@
 
 
 - (void)dealloc{
-    [_aCategory release];
+//    [_aCategory release];
     [super dealloc];
 }
 

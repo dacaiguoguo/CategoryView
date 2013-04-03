@@ -18,13 +18,14 @@
     return 5;
 }
 - (NSString *)titleAtTopRow:(int)row{
-    return self.dataSource[row];
+    return [NSString stringWithFormat:@"title:%@",self.dataSource[row]];
 }
 - (NSString *)subTitleAtTopRow:(int)row{
-    return self.dataSource[row];
+    return [NSString stringWithFormat:@"subTitle:%@",self.dataSource[row]];
+;
 }
 - (NSArray*)itemsAtRow:(int)row{
-    return nil;
+    return @[@"1",@"2",@"3",@"4"];
 }
 - (void)HeaderDetailList:(YKHeaderDetailListView *)_headerList didTapItemAtRow:(int)_row{
     NSLog(@"didTapItemAtRow:%d",_row);
@@ -43,7 +44,7 @@
 {
     [super viewDidLoad];
     self.dataSource = @[@"1",@"2",@"3",@"4",@"5"];
-    YKHeaderDetailListView *header = [[YKHeaderDetailListView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    YKHeaderDetailListView *header = [[YKHeaderDetailListView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-49-46)];
     header.datasource = self;
     header.delegate = self;
     [self.view addSubview:header];

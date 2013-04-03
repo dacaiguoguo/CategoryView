@@ -50,7 +50,7 @@
  @superclass UIButton
  */
 @interface YKButtonForGategory : UIButton
-@property(nonatomic, retain) YKDataMode* aCategory;
+//@property(nonatomic, retain) YKDataMode* aCategory;
 @end
 
 /*!

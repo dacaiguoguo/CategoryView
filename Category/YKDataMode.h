@@ -8,8 +8,17 @@
 
 @class YKSectionHeaderView;
 
-@interface YKDataMode : NSObject
-@property (assign) BOOL open_cate;
+//@interface YKDataMode : NSObject
+//@property (assign) BOOL open_cate;
+//@property (nonatomic, copy) NSString *title_cate;
+//@property (nonatomic, copy) NSString *subTitle_cate;
+//@property (nonatomic, retain) YKSectionHeaderView *headerView_cate;
+//@property (nonatomic, retain) NSArray *subArray;
+//
+//@end
+
+@interface YKDataMoudleList : NSObject
+@property (assign) BOOL open;
 @property (nonatomic, copy) NSString *title_cate;
 @property (nonatomic, copy) NSString *subTitle_cate;
 @property (nonatomic, retain) YKSectionHeaderView *headerView_cate;

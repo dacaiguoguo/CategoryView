@@ -24,7 +24,6 @@
 		59B828A9170A8BA70069FBB3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828A8170A8BA70069FBB3 /* Default.png */; };
 		59B828AB170A8BA70069FBB3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828AA170A8BA70069FBB3 /* Default@2x.png */; };
 		59B828AD170A8BA70069FBB3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828AC170A8BA70069FBB3 /* Default-568h@2x.png */; };
-		59B828B0170A8BA70069FBB3 /* YKCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828AF170A8BA70069FBB3 /* YKCategoryViewController.m */; };
 		59B828B2170A8BA70069FBB3 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828B1170A8BA70069FBB3 /* first.png */; };
 		59B828B4170A8BA70069FBB3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B828B3170A8BA70069FBB3 /* first@2x.png */; };
 		59B828B7170A8BA70069FBB3 /* YKProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828B6170A8BA70069FBB3 /* YKProductListViewController.m */; };
@@ -40,8 +39,6 @@
 		59B828E3170A8C580069FBB3 /* YKCategoryClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */; };
 		59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828E5170A8CC40069FBB3 /* YKDataMode.m */; };
 		59B828ED170AA4F80069FBB3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B828EC170AA4F80069FBB3 /* QuartzCore.framework */; };
-		59B828F0170AAC240069FBB3 /* YKCateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828EF170AAC240069FBB3 /* YKCateTableView.m */; };
-		59ED5034170BA61A00E7CA93 /* YKCLCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED5032170BA61A00E7CA93 /* YKCLCategoryViewController.m */; };
 		59ED5035170BA61A00E7CA93 /* YKCLCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -233,16 +230,16 @@
 			children = (
 				59B828E4170A8CC40069FBB3 /* YKDataMode.h */,
 				59B828E5170A8CC40069FBB3 /* YKDataMode.m */,
-				59B828E1170A8C580069FBB3 /* YKCategoryClasses.h */,
-				59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */,
-				590F3C13170C18FB00CD804C /* YKHeaderDetailListView.h */,
-				590F3C14170C18FB00CD804C /* YKHeaderDetailListView.m */,
 				59B828EE170AAC240069FBB3 /* YKCateTableView.h */,
 				59B828EF170AAC240069FBB3 /* YKCateTableView.m */,
 				59B828AE170A8BA70069FBB3 /* YKCategoryViewController.h */,
 				59B828AF170A8BA70069FBB3 /* YKCategoryViewController.m */,
 				59B828BC170A8BA70069FBB3 /* YKCategoryViewController.xib */,
 				599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */,
+				59B828E1170A8C580069FBB3 /* YKCategoryClasses.h */,
+				59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */,
+				590F3C13170C18FB00CD804C /* YKHeaderDetailListView.h */,
+				590F3C14170C18FB00CD804C /* YKHeaderDetailListView.m */,
 			);
 			name = cate;
 			sourceTree = "<group>";
@@ -370,13 +367,10 @@
 			files = (
 				59B828A3170A8BA70069FBB3 /* main.m in Sources */,
 				59B828A7170A8BA70069FBB3 /* YKAppDelegate.m in Sources */,
-				59B828B0170A8BA70069FBB3 /* YKCategoryViewController.m in Sources */,
 				59B828B7170A8BA70069FBB3 /* YKProductListViewController.m in Sources */,
 				59B828E3170A8C580069FBB3 /* YKCategoryClasses.m in Sources */,
 				59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */,
-				59B828F0170AAC240069FBB3 /* YKCateTableView.m in Sources */,
 				599DCA13170AC45200D0164E /* YKXIBHelper.m in Sources */,
-				59ED5034170BA61A00E7CA93 /* YKCLCategoryViewController.m in Sources */,
 				590F3BC5170BFF6100CD804C /* YKDataBase.m in Sources */,
 				590F3C15170C18FB00CD804C /* YKHeaderDetailListView.m in Sources */,
 				590F3C19170C196600CD804C /* YKViewController.m in Sources */,

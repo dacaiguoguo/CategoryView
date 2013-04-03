@@ -32,7 +32,7 @@
     UIViewController *viewController1 = [[[YKViewController alloc] initWithNibName:@"YKViewController" bundle:nil] autorelease];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController1];
     
-    UIViewController *viewController2 = [[[YKCLCategoryViewController alloc] initWithNibName:@"YKCLCategoryViewController" bundle:nil] autorelease];
+    UIViewController *viewController2 = [[[YKViewController alloc] initWithNibName:@"YKViewController" bundle:nil] autorelease];
     
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
 

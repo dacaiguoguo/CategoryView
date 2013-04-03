@@ -7,14 +7,27 @@
 //
 
 #import "YKDataMode.h"
-
-@implementation YKDataMode
+//
+//@implementation YKDataMode
+//- (id)init{
+//    self = [super init];
+//    if (self) {
+//    }
+//    return self;
+//}
+//
+//
+//@end
+@implementation YKDataMoudleList
 - (id)init{
     self = [super init];
     if (self) {
     }
     return self;
 }
-
+- (NSString *)description{
+    return  [NSString stringWithFormat:@"dd:%@",self.open?@"YES":@"NO"];
+    
+}
 
 @end
