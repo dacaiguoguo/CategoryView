@@ -37,6 +37,8 @@
 		59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828E5170A8CC40069FBB3 /* YKDataMode.m */; };
 		59B828ED170AA4F80069FBB3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B828EC170AA4F80069FBB3 /* QuartzCore.framework */; };
 		59B828F0170AAC240069FBB3 /* YKCateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B828EF170AAC240069FBB3 /* YKCateTableView.m */; };
+		59ED5034170BA61A00E7CA93 /* YKCLCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED5032170BA61A00E7CA93 /* YKCLCategoryViewController.m */; };
+		59ED5035170BA61A00E7CA93 /* YKCLCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,9 @@
 		59B828EC170AA4F80069FBB3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		59B828EE170AAC240069FBB3 /* YKCateTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCateTableView.h; sourceTree = "<group>"; };
 		59B828EF170AAC240069FBB3 /* YKCateTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCateTableView.m; sourceTree = "<group>"; };
+		59ED5031170BA61A00E7CA93 /* YKCLCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCLCategoryViewController.h; sourceTree = "<group>"; };
+		59ED5032170BA61A00E7CA93 /* YKCLCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCLCategoryViewController.m; sourceTree = "<group>"; };
+		59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCLCategoryViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +160,9 @@
 				59B828E9170AA26A0069FBB3 /* cate */,
 				59B828A5170A8BA70069FBB3 /* YKAppDelegate.h */,
 				59B828A6170A8BA70069FBB3 /* YKAppDelegate.m */,
+				59ED5031170BA61A00E7CA93 /* YKCLCategoryViewController.h */,
+				59ED5032170BA61A00E7CA93 /* YKCLCategoryViewController.m */,
+				59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */,
 				59B828AE170A8BA70069FBB3 /* YKCategoryViewController.h */,
 				59B828AF170A8BA70069FBB3 /* YKCategoryViewController.m */,
 				59B828BC170A8BA70069FBB3 /* YKCategoryViewController.xib */,
@@ -306,6 +314,7 @@
 				5956D410170ABAC200F724CA /* moo.png in Resources */,
 				599DCA0D170ABF4600D0164E /* fenlei_bg_line.png in Resources */,
 				599DCA0F170AC32B00D0164E /* YKTableViewCellForGategory.xib in Resources */,
+				59ED5035170BA61A00E7CA93 /* YKCLCategoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +357,7 @@
 				59B828E6170A8CC40069FBB3 /* YKDataMode.m in Sources */,
 				59B828F0170AAC240069FBB3 /* YKCateTableView.m in Sources */,
 				599DCA13170AC45200D0164E /* YKXIBHelper.m in Sources */,
+				59ED5034170BA61A00E7CA93 /* YKCLCategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

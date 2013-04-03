@@ -16,43 +16,34 @@
 @end
 
 @implementation YKCategoryViewController
-
+- (NSMutableArray*)getSectionInfoArray{
+//    [self doesNotRecognizeSelector:_cmd];
+    return nil;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"First", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
-        self.sectionInfoArray = [[[NSMutableArray alloc] initWithCapacity:10] autorelease];
-        for (int i=0; i<10; i++) {
-            YKDataMode *data = [[YKDataMode alloc] init];
-            //        CFShow(data);
-            data.title_cate = @"男装";
-            data.subTitle_cate = @"vt";
-            data.subArray = @[@"1",@"2",@"3",@"4"];
-            [self.sectionInfoArray addObject:data];
-            [data release];
-        }
-        self.categoryTableView = [[[YKCateTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-49-46) andData:self.sectionInfoArray] autorelease];
-        _categoryTableView.dataSource = self;
-        _categoryTableView.delegate = self;
-        [self.view addSubview:_categoryTableView];
+
     }
     return self;
 }
 
 /*当分类没有子分类时调用：去商品列表的方法 */
 - (void)didSelectSection:(NSNumber *)_section{
-    CLog(@"%s",__func__);
-    YKProductListViewController *p = [[YKProductListViewController alloc] initWithNibName:@"YKProductDetailViewController" bundle:nil];
-    [self.navigationController pushViewController:p animated:YES];
-    [p release];
+
 }
 
 							
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.sectionInfoArray = [self getSectionInfoArray];
+    self.categoryTableView = [[[YKCateTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-49-46) andData:self.sectionInfoArray] autorelease];
+    _categoryTableView.dataSource = self;
+    _categoryTableView.delegate = self;
+    [self.view addSubview:_categoryTableView];
 
 
 	// Do any additional setup after loading the view, typically from a nib.
@@ -72,16 +63,23 @@
     YKDataMode* category=(YKDataMode*)[self.sectionInfoArray objectAtIndex:indexPath.section];
     int row = indexPath.row;
     NSString * obj =[category.subArray objectAtIndex:row*2];
-    [cell.leftLabel setText:obj];
-//    cell.leftGategory.aCategory = obj;
-    [cell.leftGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
+//    assert([obj isKindOfClass:[NSString class]]);
+    [cell.leftLabel setText:obj.description];
+    if ([obj isKindOfClass:[YKDataMode class]]) {
+        cell.leftGategory.aCategory = (YKDataMode*)obj;
+        
+    }    [cell.leftGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
     if (row*2+1==category.subArray.count) {
         cell.rightGategory.hidden = YES;
     }else{
         cell.rightGategory.hidden = NO;
         obj =[category.subArray objectAtIndex:row*2+1];
-        [cell.rightLabel setText:obj];
-//        cell.rightGategory.aCategory = obj;
+//        assert([obj isKindOfClass:[NSString class]]);
+        [cell.rightLabel setText:obj.description];
+        if ([obj isKindOfClass:[YKDataMode class]]) {
+            cell.rightGategory.aCategory = (YKDataMode*)obj;
+
+        }
         [cell.rightGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
     }
     return cell;
@@ -111,6 +109,11 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
    return self.sectionInfoArray.count;
+}
+
+- (NSArray *)numberOfSubArrayAtSection:(int )_index{
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 70;

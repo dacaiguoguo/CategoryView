@@ -37,10 +37,10 @@
 	
     
 	YKDataMode *sectionInfo = [self.sectionInfoArray objectAtIndex:sectionOpened];
-	if (sectionInfo.subArray==nil||sectionInfo.subArray.count<1) {
-        [self.delegate performSelector:@selector(didSelectSection:) withObject:[NSNumber numberWithInt:sectionOpened]];
-        return;
-    }
+//	if (sectionInfo.subArray==nil||sectionInfo.subArray.count<1) {
+//        [self.delegate performSelector:@selector(didSelectSection:) withObject:[NSNumber numberWithInt:sectionOpened]];
+//        return;
+//    }
 	sectionInfo.open_cate = YES;
     NSInteger countOfRowsToInsert = (NSInteger)ceilf([sectionInfo.subArray count]/2);
     NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];
@@ -83,6 +83,8 @@
     [self beginUpdates];
     [self insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:insertAnimation];
     [self deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:deleteAnimation];
+    [indexPathsToDelete release];
+    [indexPathsToInsert release];
     [self endUpdates];
     
     
@@ -110,6 +112,7 @@
             [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:sectionClosed]];
         }
         [self deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationTop];
+        [indexPathsToDelete release];
     }
     self.openSectionIndex = NSNotFound;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"_openSectionIndex" object:nil];

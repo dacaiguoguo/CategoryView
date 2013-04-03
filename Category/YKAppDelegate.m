@@ -12,6 +12,8 @@
 
 #import "YKProductListViewController.h"
 
+#import "YKCLCategoryViewController.h"
+
 @implementation YKAppDelegate
 
 - (void)dealloc
@@ -25,12 +27,16 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[YKCategoryViewController alloc] initWithNibName:@"YKFirstViewController" bundle:nil] autorelease];
+    UIViewController *viewController1 = [[[YKCLCategoryViewController alloc] initWithNibName:@"YKCLCategoryViewController" bundle:nil] autorelease];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController1];
     
-    UIViewController *viewController2 = [[[YKProductListViewController alloc] initWithNibName:@"YKSecondViewController" bundle:nil] autorelease];
+    UIViewController *viewController2 = [[[YKCLCategoryViewController alloc] initWithNibName:@"YKCLCategoryViewController" bundle:nil] autorelease];
+    
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
+
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[nav, viewController2];
+    self.tabBarController.viewControllers = @[nav, nav2];
+    [nav2 release];
     [nav release];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
