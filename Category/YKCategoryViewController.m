@@ -16,6 +16,21 @@
 @end
 
 @implementation YKCategoryViewController
+#pragma mark - YKCategoryDatasource
+/*当分类没有子分类时调用：去商品列表的方法 */
+- (void)didSelectSection:(NSNumber *)_section{
+    [self doesNotRecognizeSelector:_cmd];
+}
+- (void)goProList:(YKButtonForGategory *)button{
+    [self doesNotRecognizeSelector:_cmd];
+}
+- (NSArray*)subArrayForSection:(int)_section{
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
+}
+#pragma mark end YKCategoryDatasource
+#pragma mark -
+
 - (NSMutableArray*)getSectionInfoArray{
 //    [self doesNotRecognizeSelector:_cmd];
     return nil;
@@ -30,12 +45,6 @@
     return self;
 }
 
-/*当分类没有子分类时调用：去商品列表的方法 */
-- (void)didSelectSection:(NSNumber *)_section{
-
-}
-
-							
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -63,26 +72,29 @@
     }
 
 }
+
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    static NSString *idfi = @"YKTableViewCellForGategory";
     YKTableViewCellForGategory *cell = [tableView dequeueReusableCellWithIdentifier:idfi];
     if (!cell) {
         cell=[YKXIBHelper loadObjectFromXIBName:@"YKTableViewCellForGategory" type:[YKTableViewCellForGategory class]];
     }
-    YKDataMode* category=(YKDataMode*)[self.sectionInfoArray objectAtIndex:indexPath.section];
+    
+    NSArray *sub_array = [self subArrayForSection:indexPath.section];
     int row = indexPath.row;
-    NSString * obj =[category.subArray objectAtIndex:row*2];
+    NSString * obj =[sub_array objectAtIndex:row*2];
 //    assert([obj isKindOfClass:[NSString class]]);
     [cell.leftLabel setText:obj.description];
     if ([obj isKindOfClass:[YKDataMode class]]) {
         cell.leftGategory.aCategory = (YKDataMode*)obj;
         
     }    [cell.leftGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
-    if (row*2+1==category.subArray.count) {
+    if (row*2+1==sub_array.count) {
         cell.rightGategory.hidden = YES;
     }else{
         cell.rightGategory.hidden = NO;
-        obj =[category.subArray objectAtIndex:row*2+1];
+        obj =[sub_array objectAtIndex:row*2+1];
 //        assert([obj isKindOfClass:[NSString class]]);
         [cell.rightLabel setText:obj.description];
         if ([obj isKindOfClass:[YKDataMode class]]) {

@@ -21,15 +21,16 @@
         //        CFShow(data);
         data.title_cate = @"男装";
         data.subTitle_cate = @"vtt";
-        data.subArray = [self sub];
+        data.subArray = @[@"1",@"2",@"3",@"4"];
         [ret addObject:data];
         [data release];
     }
-
-    
     return ret;
 }
-- (NSArray *)sub{
+
+
+- (NSArray*)subArrayForSection:(int)_section{
+
     NSMutableArray *inter = [[[NSMutableArray alloc] initWithCapacity:10] autorelease];
     for (int i=0; i<10; i++) {
         YKDataMode *data = [[YKDataMode alloc] init];

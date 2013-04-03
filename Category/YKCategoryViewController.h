@@ -18,15 +18,17 @@
  */
 @protocol YKCategoryDatasource <NSObject>
 /*获得section对应的子数据的方法*/
-- (NSArray *)subArrayForSection:(NSInteger)index;
+- (NSArray*)subArrayForSection:(int)_section;
 /*获得数据源方法*/
-- (NSArray *)sectionInfoSource;
-
-
+- (NSMutableArray*)getSectionInfoArray;
+/*点击可进入商品详情的方法*/
+- (void)didSelectSection:(NSNumber *)_section;
+/*进入商品详情的方法*/
+- (void)goProList:(YKButtonForGategory*)button;
 
 @end
 
-@interface YKCategoryViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface YKCategoryViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,YKCategoryDatasource>
 @property (retain, nonatomic) UITableView<YKSectionHeaderViewDelegate> *categoryTableView;
 /*!@var sectionInfoArray 分类信息数组*/
 @property (nonatomic, strong) NSMutableArray* sectionInfoArray;

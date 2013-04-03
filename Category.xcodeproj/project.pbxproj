@@ -163,9 +163,6 @@
 				59ED5031170BA61A00E7CA93 /* YKCLCategoryViewController.h */,
 				59ED5032170BA61A00E7CA93 /* YKCLCategoryViewController.m */,
 				59ED5033170BA61A00E7CA93 /* YKCLCategoryViewController.xib */,
-				59B828AE170A8BA70069FBB3 /* YKCategoryViewController.h */,
-				59B828AF170A8BA70069FBB3 /* YKCategoryViewController.m */,
-				59B828BC170A8BA70069FBB3 /* YKCategoryViewController.xib */,
 				59B828B5170A8BA70069FBB3 /* YKProductListViewController.h */,
 				59B828B6170A8BA70069FBB3 /* YKProductListViewController.m */,
 				59B828BF170A8BA70069FBB3 /* YKProductListViewController.xib */,
@@ -222,9 +219,12 @@
 				59B828E5170A8CC40069FBB3 /* YKDataMode.m */,
 				59B828E1170A8C580069FBB3 /* YKCategoryClasses.h */,
 				59B828E2170A8C580069FBB3 /* YKCategoryClasses.m */,
-				599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */,
 				59B828EE170AAC240069FBB3 /* YKCateTableView.h */,
 				59B828EF170AAC240069FBB3 /* YKCateTableView.m */,
+				59B828AE170A8BA70069FBB3 /* YKCategoryViewController.h */,
+				59B828AF170A8BA70069FBB3 /* YKCategoryViewController.m */,
+				59B828BC170A8BA70069FBB3 /* YKCategoryViewController.xib */,
+				599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */,
 			);
 			name = cate;
 			sourceTree = "<group>";
