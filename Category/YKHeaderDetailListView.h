@@ -21,11 +21,13 @@
 - (void)HeaderDetailList:(YKHeaderDetailListView *)_headerList didTapItemAtRow:(int)_row;
 
 @end
-
+/*
+    @class YKHeaderDetailListView
+    @superClass UIView
+    @description 用tableView的header 点击向下展开Cell
+ */
 @interface YKHeaderDetailListView : UIView
-
-//@property(strong) NSArray* titleArray;
-@property(assign) id<YKHeaderDetailListViewDataSource> datasource;
+@property (assign) id<YKHeaderDetailListViewDataSource> datasource;
 @property (assign) id<YKHeaderDetailListViewDelegate> delegate;
 -(void) reloadData;
 @end
