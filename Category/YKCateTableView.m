@@ -37,10 +37,10 @@
 	
     
 	YKDataMode *sectionInfo = [self.sectionInfoArray objectAtIndex:sectionOpened];
-//	if (sectionInfo.subArray==nil||sectionInfo.subArray.count<1) {
-//        [self.delegate performSelector:@selector(didSelectSection:) withObject:[NSNumber numberWithInt:sectionOpened]];
-//        return;
-//    }
+	if ((![sectionInfo isKindOfClass:[YKDataMode class]])||sectionInfo.subArray==nil||sectionInfo.subArray.count<1) {
+        [self.delegate performSelector:@selector(didSelectSection:) withObject:[NSNumber numberWithInt:sectionOpened]];
+        return;
+    }
 	sectionInfo.open_cate = YES;
     NSInteger countOfRowsToInsert = (NSInteger)ceilf([sectionInfo.subArray count]/2);
     NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];

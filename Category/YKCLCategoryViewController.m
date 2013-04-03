@@ -14,6 +14,7 @@
 
 @implementation YKCLCategoryViewController
 - (NSMutableArray*)getSectionInfoArray{
+
     NSMutableArray *ret = [[[NSMutableArray alloc] initWithCapacity:10] autorelease];
     for (int i=0; i<10; i++) {
         YKDataMode *data = [[YKDataMode alloc] init];
@@ -47,6 +48,20 @@
     [self.navigationController pushViewController:p animated:YES];
     [p release];
 
+}
+
+- (void)goProList:(YKButtonForGategory*)button{
+    CLog(@"%s",__func__);
+    
+    if (button.aCategory.subArray==nil||button.aCategory.subArray.count<1) {
+        [self didSelectSection:nil];
+        return;
+    }
+    
+    YKCLCategoryViewController *to = [[YKCLCategoryViewController alloc] initWithNibName:@"YKCategoryViewController" bundle:nil];
+    to.sectionInfoArray = [button.aCategory.subArray mutableCopy];
+    [self.navigationController pushViewController:to animated:YES];
+    [to release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
