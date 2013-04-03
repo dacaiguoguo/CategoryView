@@ -12,6 +12,7 @@
 -(int) numOfTop;
 -(NSString*) titleAtTopRow:(int) row;
 -(NSArray*) itemsAtRow:(int) row;
+- (NSString *)subTitleAtTopRow:(int)row;
 @end
 
 @class YKHeaderDetailListView;

@@ -14,6 +14,8 @@
 
 #import "YKCLCategoryViewController.h"
 
+#import "YKViewController.h"
+
 @implementation YKAppDelegate
 
 - (void)dealloc
@@ -27,7 +29,7 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[YKCLCategoryViewController alloc] initWithNibName:@"YKCLCategoryViewController" bundle:nil] autorelease];
+    UIViewController *viewController1 = [[[YKViewController alloc] initWithNibName:@"YKViewController" bundle:nil] autorelease];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController1];
     
     UIViewController *viewController2 = [[[YKCLCategoryViewController alloc] initWithNibName:@"YKCLCategoryViewController" bundle:nil] autorelease];

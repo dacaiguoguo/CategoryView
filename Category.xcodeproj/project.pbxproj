@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		590F3BC5170BFF6100CD804C /* YKDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F3BC4170BFF6100CD804C /* YKDataBase.m */; };
 		590F3C15170C18FB00CD804C /* YKHeaderDetailListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F3C14170C18FB00CD804C /* YKHeaderDetailListView.m */; };
+		590F3C19170C196600CD804C /* YKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F3C17170C196600CD804C /* YKViewController.m */; };
+		590F3C1A170C196600CD804C /* YKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590F3C18170C196600CD804C /* YKViewController.xib */; };
 		5956D410170ABAC200F724CA /* moo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5956D40F170ABAC200F724CA /* moo.png */; };
 		599DCA0D170ABF4600D0164E /* fenlei_bg_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 599DCA0C170ABF4600D0164E /* fenlei_bg_line.png */; };
 		599DCA0F170AC32B00D0164E /* YKTableViewCellForGategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */; };
@@ -58,6 +60,9 @@
 		590F3BC4170BFF6100CD804C /* YKDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDataBase.m; sourceTree = "<group>"; };
 		590F3C13170C18FB00CD804C /* YKHeaderDetailListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHeaderDetailListView.h; sourceTree = "<group>"; };
 		590F3C14170C18FB00CD804C /* YKHeaderDetailListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHeaderDetailListView.m; sourceTree = "<group>"; };
+		590F3C16170C196600CD804C /* YKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKViewController.h; sourceTree = "<group>"; };
+		590F3C17170C196600CD804C /* YKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKViewController.m; sourceTree = "<group>"; };
+		590F3C18170C196600CD804C /* YKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKViewController.xib; sourceTree = "<group>"; };
 		5956D40F170ABAC200F724CA /* moo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moo.png; sourceTree = "<group>"; };
 		599DCA0C170ABF4600D0164E /* fenlei_bg_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fenlei_bg_line.png; sourceTree = "<group>"; };
 		599DCA0E170AC32B00D0164E /* YKTableViewCellForGategory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKTableViewCellForGategory.xib; sourceTree = "<group>"; };
@@ -166,6 +171,9 @@
 				59B828E9170AA26A0069FBB3 /* cate */,
 				59B828A5170A8BA70069FBB3 /* YKAppDelegate.h */,
 				59B828A6170A8BA70069FBB3 /* YKAppDelegate.m */,
+				590F3C16170C196600CD804C /* YKViewController.h */,
+				590F3C17170C196600CD804C /* YKViewController.m */,
+				590F3C18170C196600CD804C /* YKViewController.xib */,
 				590F3BC3170BFF6100CD804C /* YKDataBase.h */,
 				590F3BC4170BFF6100CD804C /* YKDataBase.m */,
 				59ED5031170BA61A00E7CA93 /* YKCLCategoryViewController.h */,
@@ -325,6 +333,7 @@
 				599DCA0D170ABF4600D0164E /* fenlei_bg_line.png in Resources */,
 				599DCA0F170AC32B00D0164E /* YKTableViewCellForGategory.xib in Resources */,
 				59ED5035170BA61A00E7CA93 /* YKCLCategoryViewController.xib in Resources */,
+				590F3C1A170C196600CD804C /* YKViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +379,7 @@
 				59ED5034170BA61A00E7CA93 /* YKCLCategoryViewController.m in Sources */,
 				590F3BC5170BFF6100CD804C /* YKDataBase.m in Sources */,
 				590F3C15170C18FB00CD804C /* YKHeaderDetailListView.m in Sources */,
+				590F3C19170C196600CD804C /* YKViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
