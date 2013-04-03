@@ -21,9 +21,7 @@
 - (void)didSelectSection:(NSNumber *)_section{
     [self doesNotRecognizeSelector:_cmd];
 }
-- (void)goProList:(YKButtonForGategory *)button{
-    [self doesNotRecognizeSelector:_cmd];
-}
+
 - (NSArray*)subArrayForSection:(int)_section{
     [self doesNotRecognizeSelector:_cmd];
     return nil;
@@ -72,24 +70,39 @@
     }
 
 }
-
+- (void)goProList2:(YKButtonForGategory *)button{
+    if (button.aCategory.subArray==nil||button.aCategory.subArray.count<1) {
+        [self didSelectSection:nil];
+        return;
+    }
+    
+    YKCategoryViewController* to = [[self.class alloc] initWithNibName:NSStringFromClass(self.class) bundle:nil];
+    to.sectionInfoArray = [button.aCategory.subArray mutableCopy];
+    [self.navigationController pushViewController:to animated:YES];
+    [to release];
+}
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
    static NSString *idfi = @"YKTableViewCellForGategory";
+    
     YKTableViewCellForGategory *cell = [tableView dequeueReusableCellWithIdentifier:idfi];
+    
     if (!cell) {
         cell=[YKXIBHelper loadObjectFromXIBName:@"YKTableViewCellForGategory" type:[YKTableViewCellForGategory class]];
     }
-    
-    NSArray *sub_array = [self subArrayForSection:indexPath.section];
+        YKDataMode* category=(YKDataMode*)[self.sectionInfoArray objectAtIndex:indexPath.section];
+    NSArray *sub_array = category.subArray;
     int row = indexPath.row;
     NSString * obj =[sub_array objectAtIndex:row*2];
 //    assert([obj isKindOfClass:[NSString class]]);
     [cell.leftLabel setText:obj.description];
     if ([obj isKindOfClass:[YKDataMode class]]) {
         cell.leftGategory.aCategory = (YKDataMode*)obj;
-        
-    }    [cell.leftGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    [cell.leftGategory addTarget:self action:@selector(goProList2:) forControlEvents:UIControlEventTouchUpInside];
+    
     if (row*2+1==sub_array.count) {
         cell.rightGategory.hidden = YES;
     }else{
@@ -101,7 +114,7 @@
             cell.rightGategory.aCategory = (YKDataMode*)obj;
 
         }
-        [cell.rightGategory addTarget:self action:@selector(goProList:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.rightGategory addTarget:self action:@selector(goProList2:) forControlEvents:UIControlEventTouchUpInside];
     }
     return cell;
 

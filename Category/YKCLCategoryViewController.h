@@ -8,5 +8,5 @@
 
 #import "YKCategoryViewController.h"
 
-@interface YKCLCategoryViewController : YKCategoryViewController<YKCategoryDatasource>
+@interface YKCLCategoryViewController : YKCategoryViewController<YKCategoryDatasource,YKCategoryDelegate>
 @end

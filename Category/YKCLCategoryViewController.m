@@ -21,7 +21,7 @@
         //        CFShow(data);
         data.title_cate = @"男装";
         data.subTitle_cate = @"vtt";
-        data.subArray = @[@"1",@"2",@"3",@"4"];
+        data.subArray = [self subArrayForSection:i];
         [ret addObject:data];
         [data release];
     }
@@ -30,12 +30,11 @@
 
 
 - (NSArray*)subArrayForSection:(int)_section{
-
     NSMutableArray *inter = [[[NSMutableArray alloc] initWithCapacity:10] autorelease];
     for (int i=0; i<10; i++) {
         YKDataMode *data = [[YKDataMode alloc] init];
         //        CFShow(data);
-        data.title_cate = @"subArray";
+        data.title_cate =  [NSString stringWithFormat:@"subArray%d",_section];
         data.subTitle_cate = @"vt";
         data.subArray = @[@"1",@"2",@"3",@"4"];
         [inter addObject:data];
@@ -51,19 +50,7 @@
 
 }
 
-- (void)goProList:(YKButtonForGategory*)button{
-    CLog(@"%s",__func__);
-    
-    if (button.aCategory.subArray==nil||button.aCategory.subArray.count<1) {
-        [self didSelectSection:nil];
-        return;
-    }
-    
-    YKCLCategoryViewController *to = [[YKCLCategoryViewController alloc] initWithNibName:@"YKCategoryViewController" bundle:nil];
-    to.sectionInfoArray = [button.aCategory.subArray mutableCopy];
-    [self.navigationController pushViewController:to animated:YES];
-    [to release];
-}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

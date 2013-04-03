@@ -102,7 +102,10 @@
      Create an array of the index paths of the rows in the section that was closed, then delete those rows from the table view.
      */
 	YKDataMode *sectionInfo = [self.sectionInfoArray objectAtIndex:sectionClosed];
-	
+    if ((![sectionInfo isKindOfClass:[YKDataMode class]])||sectionInfo.subArray==nil||sectionInfo.subArray.count<1) {
+        [self.delegate performSelector:@selector(didSelectSection:) withObject:[NSNumber numberWithInt:sectionClosed]];
+        return;
+    }
     sectionInfo.open_cate = NO;
     NSInteger countOfRowsToDelete = [self numberOfRowsInSection:sectionClosed];
     
