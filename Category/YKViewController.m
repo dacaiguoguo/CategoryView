@@ -2,7 +2,7 @@
 //  YKViewController.m
 //  Category
 //
-//  Created by  YK on 13-4-3.
+//  Created by  yanguo.sun on 13-4-3.
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 

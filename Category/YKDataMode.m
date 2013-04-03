@@ -7,17 +7,7 @@
 //
 
 #import "YKDataMode.h"
-//
-//@implementation YKDataMode
-//- (id)init{
-//    self = [super init];
-//    if (self) {
-//    }
-//    return self;
-//}
-//
-//
-//@end
+
 @implementation YKDataMoudleList
 - (id)init{
     self = [super init];
