@@ -22,10 +22,7 @@
     [self doesNotRecognizeSelector:_cmd];
 }
 
-- (NSArray*)subArrayForSection:(int)_section{
-    [self doesNotRecognizeSelector:_cmd];
-    return nil;
-}
+
 #pragma mark end YKCategoryDatasource
 #pragma mark -
 
@@ -43,6 +40,17 @@
     return self;
 }
 
+
+- (void)workForData{
+    [self.sectionInfoArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        YKDataMode *mode = [[YKDataMode alloc] init];
+        mode.open_cate = NO;
+        mode.headerView_cate = nil;
+        mode.title_cate = [obj valueForKey:K_title];
+        mode.headerView_cate = [obj valueForKey:K_subTitle];
+        mode.subArray = [obj valueForKey:K_subArray];
+    }];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -138,13 +146,13 @@
     if ([dataMode isKindOfClass:[YKDataMode class]]) {
         view = dataMode.headerView_cate;
         if (!view) {
-            dataMode.headerView_cate = [[YKSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:dataMode.title_cate subTitle:dataMode.subTitle_cate imageUrl:nil section:section delegate:self.categoryTableView];
+            dataMode.headerView_cate = [[[YKSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:dataMode.title_cate subTitle:dataMode.subTitle_cate imageUrl:nil section:section delegate:self.categoryTableView] autorelease];
             dataMode.headerView_cate.delegate = _categoryTableView;
             view = dataMode.headerView_cate;
         }
         return view;
     }else{
-       return [[YKSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:dataMode.description subTitle:dataMode.description imageUrl:nil section:section delegate:self.categoryTableView];
+       return [[[YKSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:dataMode.description subTitle:dataMode.description imageUrl:nil section:section delegate:self.categoryTableView] autorelease];
     }
 
 }

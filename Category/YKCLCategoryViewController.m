@@ -8,6 +8,7 @@
 
 #import "YKCLCategoryViewController.h"
 #import "YKProductListViewController.h"
+#import "YKDataBase.h"
 @interface YKCLCategoryViewController ()
 
 @end
@@ -17,8 +18,7 @@
 
     NSMutableArray *ret = [[[NSMutableArray alloc] initWithCapacity:10] autorelease];
     for (int i=0; i<10; i++) {
-        YKDataMode *data = [[YKDataMode alloc] init];
-        //        CFShow(data);
+        YKDataBase *data = [[YKDataBase alloc] init];
         data.title_cate = @"男装";
         data.subTitle_cate = @"vtt";
         data.subArray = [self subArrayForSection:i];
@@ -32,8 +32,7 @@
 - (NSArray*)subArrayForSection:(int)_section{
     NSMutableArray *inter = [[[NSMutableArray alloc] initWithCapacity:10] autorelease];
     for (int i=0; i<10; i++) {
-        YKDataMode *data = [[YKDataMode alloc] init];
-        //        CFShow(data);
+        YKDataBase *data = [[YKDataBase alloc] init];
         data.title_cate =  [NSString stringWithFormat:@"subArray%d",_section];
         data.subTitle_cate = @"vt";
         data.subArray = @[@"1",@"2",@"3",@"4"];

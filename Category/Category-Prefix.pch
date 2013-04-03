@@ -17,3 +17,7 @@
 #else
 #define CLog(format, ...)
 #endif
+
+#define K_title @"title"
+#define K_subTitle @"subTitle"
+#define K_subArray @"subArray"

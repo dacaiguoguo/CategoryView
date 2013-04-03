@@ -10,6 +10,9 @@
 #import "YKCategoryClasses.h"
 #import "YKDataMode.h"
 #import "YKCateTableView.h"
+
+
+
 /*
     使用方法
     这是一个控制器
@@ -18,8 +21,7 @@
  */
 @protocol YKCategoryDatasource <NSObject>
 @required
-/*获得section对应的子数据的方法*/
-- (NSArray*)subArrayForSection:(int)_section;
+
 /*获得数据源方法*/
 - (NSMutableArray*)getSectionInfoArray;
 
