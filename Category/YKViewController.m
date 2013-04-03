@@ -8,6 +8,8 @@
 
 #import "YKViewController.h"
 
+#import "YKSubViewController.h"
+
 @interface YKViewController ()
 
 @end
@@ -29,6 +31,10 @@
 }
 - (void)HeaderDetailList:(YKHeaderDetailListView *)_headerList didTapItemAtRow:(int)_row{
     NSLog(@"didTapItemAtRow:%d",_row);
+    YKSubViewController *sub = [[YKSubViewController alloc] initWithNibName:@"YKSubViewController" bundle:nil];
+    sub.threeCateArray = @[@"11",@"22",@"33",@"44"];
+    [self.navigationController pushViewController:sub animated:YES];
+    [sub release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
